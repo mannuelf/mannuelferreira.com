@@ -11,17 +11,32 @@
 .ghostWhite {
   color: #f6f8ff; }
 
-.title--sourceSans {
-  font-family: "Source Sans Pro", sans-serif; }
+.title {
+  color: white;
+  font-size: 3em;
+  font-weight: 400;
+  padding: 0;
+  margin: 0; }
+  .title--sourceSans {
+    font-family: "Source Sans Pro", sans-serif; }
+  .title--firaSans {
+    font-family: "Fira Sans", sans-serif; }
+  .title--spaceMono {
+    font-family: "Space Mono", monospace; }
+  .title--droid {
+    font-family: "Droid Serif", serif; }
 
-.title--firaSans {
-  font-family: "Fira Sans", sans-serif; }
-
-.title--spaceMono {
-  font-family: "Space Mono", monospace; }
-
-.title--droid {
-  font-family: "Droid Serif", serif; }
+.copy {
+  color: white;
+  font-size: 1.1em; }
+  .copy--sourceSans {
+    font-family: "Source Sans Pro", sans-serif; }
+  .copy--firaSans {
+    font-family: "Fira Sans", sans-serif; }
+  .copy--spaceMono {
+    font-family: "Space Mono", monospace; }
+  .copy--droid {
+    font-family: "Droid Serif", serif; }
 
 html, body {
   height: 100%; }
@@ -47,7 +62,7 @@ body {
   position: absolute;
   top: 10%;
   left: 10%;
-  width: 30%; }
+  width: 50%; }
 
 .colourblocking {
   z-index: 2;
@@ -56,15 +71,11 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(35, 206, 107, 0.6); }
+  background-color: rgba(35, 206, 107, 0.8); }
 
 .content {
   text-align: center;
   display: inline-block; }
-
-.title {
-  font-size: 96px;
-  color: #F6F8FF; }
 
 .photograph {
   display: block;
