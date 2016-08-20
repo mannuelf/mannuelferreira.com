@@ -1,3 +1,8 @@
+$blue: ;
+$red: red;
+$green: green;
+$yellow: yellow;
+
 html, body {
     height: 100%;
 }
@@ -12,9 +17,30 @@ body {
 }
 
 .container {
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.title-container {
+  z-index: 10;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 30%;
+}
+
+.colourblocking {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(35, 206, 107, 0.6);
 }
 
 .content {
@@ -24,4 +50,5 @@ body {
 
 .title {
     font-size: 96px;
+    color: #F6F8FF;
 }

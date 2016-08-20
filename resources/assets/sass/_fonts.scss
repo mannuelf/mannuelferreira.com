@@ -1,0 +1,21 @@
+
+$sourceSans: 'Source Sans Pro', sans-serif;
+$firaSans: 'Fira Sans', sans-serif;
+$spaceMono: 'Space Mono', monospace;
+$droid: 'Droid Serif', serif;
+
+.title {
+
+  &--sourceSans {
+    font-family: $sourceSans;
+  }
+  &--firaSans {
+    font-family: $firaSans;
+  }
+  &--spaceMono {
+    font-family: $spaceMono;
+  }
+  &--droid {
+    font-family: $droid;
+  }
+}
