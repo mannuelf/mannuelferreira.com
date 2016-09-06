@@ -12,7 +12,7 @@
   color: #f6f8ff; }
 
 .title {
-  color: white;
+  color: #f6f8ff;
   font-size: 3em;
   font-weight: 400;
   padding: 0;
@@ -27,8 +27,9 @@
     font-family: "Droid Serif", serif; }
 
 .copy {
-  color: white;
-  font-size: 1.1em; }
+  color: #f6f8ff;
+  font-size: 1.1em;
+  line-height: 1.4; }
   .copy--sourceSans {
     font-family: "Source Sans Pro", sans-serif; }
   .copy--firaSans {
@@ -44,10 +45,13 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  display: table;
-  font-weight: 100;
-  font-family: 'Lato', sans-serif; }
+  width: 100%; }
+
+a {
+  color: #f6f8ff;
+  text-decoration: none; }
+  a:visited {
+    color: #f6f8ff; }
 
 .container {
   z-index: 10;
@@ -71,7 +75,18 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(35, 206, 107, 0.8); }
+  background-color: rgba(0, 102, 153, 0.8); }
+
+footer {
+  z-index: 10;
+  position: absolute;
+  bottom: 4%;
+  left: 10%;
+  color: #f6f8ff;
+  font-family: "Droid Serif", serif;
+  font-size: 0.9em; }
+  footer a {
+    border-bottom: 1px dashed #f6f8ff; }
 
 .content {
   text-align: center;

@@ -5,29 +5,33 @@ $spaceMono: 'Space Mono', monospace;
 $droid: 'Droid Serif', serif;
 
 .title {
-  color: white;
+  color: $ghostWhite;
   font-size: 3em;
   font-weight: 400;
   padding: 0;
   margin: 0;
-  
+
   &--sourceSans {
     font-family: $sourceSans;
   }
+
   &--firaSans {
     font-family: $firaSans;
   }
+
   &--spaceMono {
     font-family: $spaceMono;
   }
+
   &--droid {
     font-family: $droid;
   }
+  
 }
 .copy {
-  color: white;
+  color: $ghostWhite;
   font-size: 1.1em;
-
+  line-height: 1.4;
   &--sourceSans {
     font-family: $sourceSans;
   }
