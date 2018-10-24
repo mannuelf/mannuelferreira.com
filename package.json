@@ -1,0 +1,26 @@
+{
+  "name": "mannuelferreira.com",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mannuelf/mannuelferreira.com.git"
+  },
+  "keywords": [
+    "Vue Js",
+    "Nuxt js"
+  ],
+  "author": "Mannuel Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mannuelf/mannuelferreira.com/issues"
+  },
+  "homepage": "https://github.com/mannuelf/mannuelferreira.com#readme",
+  "dependencies": {
+    "nuxt": "^2.2.0"
+  }
+}
