@@ -24,7 +24,7 @@ body {
   text-align: center;
 }
 .main {
-    margin: 0 auto;
-    width: 50%;
+  margin: 0 auto;
+  width: 50%;
 }
 </style>
