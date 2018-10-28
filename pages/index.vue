@@ -23,9 +23,8 @@
         </div>
     </div>
 </template>
-
 <style lang="sass">
-@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css)
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
 body
   font-family: "Courier New", Courier, monospace
   text-align: center

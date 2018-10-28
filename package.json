@@ -23,5 +23,8 @@
   "dependencies": {
     "nuxt": "^2.2.0",
     "vue-analytics": "^5.16.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.4"
   }
 }
