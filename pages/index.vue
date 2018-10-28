@@ -31,7 +31,9 @@ body
 
 .main
   margin: 0 auto
-  width: 50%
+  width: 90%
+  @media (min-width: 768px)
+    width: 50%
 </style>
 <script>
 export default {
