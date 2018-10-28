@@ -25,6 +25,7 @@
     "vue-analytics": "^5.16.0"
   },
   "devDependencies": {
-    "node-sass": "^4.9.4"
+    "node-sass": "^4.9.4",
+    "sass-loader": "^7.1.0"
   }
 }
