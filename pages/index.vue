@@ -10,9 +10,14 @@
             <p>I write on a blog here <a href="http://www.themwebs.me">www.themwebs.me</a></p>
 
             <h3>What I do</h3>
-            <p>I enjoy building and designing applications for the web. I enjoy working with web technologies such as PHP, python, Node.js, Sass (Sass syntax), JavaScript. I enjoy learning and teaching web development and engineering concepts. I enjoy sports'ing football and squash.</p>
-            <p>I recently launched a site called <a href="https://www.whatcoinwhichcoin.com">WHATcoin WHICHcoin</a>. It's a work in progress, you can view the latest bitcoin and etherium price there.</p>
-
+            <p>
+              I enjoy building and designing applications for the web. I enjoy working with web technologies such as PHP, python, Node.js, Sass (Sass syntax), JavaScript.
+              I enjoy learning and teaching web development and engineering concepts. I enjoy sports'ing football and squash.
+            </p>
+            <p>
+              I recently launched a site called <a href="https://www.whatcoinwhichcoin.com">WHATcoin WHICHcoin</a>.
+              It's a work in progress, you can view the latest bitcoin and etherium price there.
+            </p>
           </article>
           <footer>
             <h3>Follow me</h3>
@@ -47,7 +52,6 @@ p
   font-family: 'Volkhov', serif
   font-size: 1em
   font-weight: 400
-
 
 a
   color: #20BF55
