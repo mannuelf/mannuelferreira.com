@@ -24,16 +24,34 @@
     </div>
 </template>
 <style lang="sass">
-@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css)
+@import url('https://fonts.googleapis.com/css?family=Viga|Volkhov:400,400i')
+
 body
-  font-family: "Courier New", Courier, monospace
+  font-family: arial, sans-serif
   text-align: center
+  background: #0B4F6C
+  color: #FBFBFF
 
 .main
   margin: 0 auto
   width: 90%
   @media (min-width: 768px)
     width: 50%
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Viga', sans-serif
+  font-weight: 400
+
+p
+  font-family: 'Volkhov', serif
+  font-size: 1em
+  font-weight: 400
+
+
+a
+  color: #20BF55
+
 </style>
 <script>
 export default {
