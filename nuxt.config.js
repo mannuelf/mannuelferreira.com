@@ -1,6 +1,6 @@
 export default {
   plugins: [
-    { src: '~plugins/ga.js', ssr: true }
+    { src: '~plugins/ga.js', ssr: false }
   ],
   head: {
     titleTemplate: 'Mannuel Ferreira',
