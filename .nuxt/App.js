@@ -9,7 +9,7 @@ const layouts = { "_default": _6f6c098b }
 
 
 export default {
-  head: {"meta":[],"link":[],"style":[],"script":[]},
+  head: {"titleTemplate":"Mannuel Ferreira","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"theme-color","content":"#006699"},{"name":"google-site-verification","content":"25AFBsBlZv3w387GNKyj0bNBhCjZxdf83TzzBi6X1po"},{"name":"description","content":"Mannuel Ferreira, Software Engineer. I enjoy building and designing applications for the web. I enjoy working with web technologies such as PHP, python, Node.js, Sass (Sass syntax), JavaScript"}],"link":[],"style":[],"script":[]},
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
     const layoutEl = h(this.layout || 'nuxt')

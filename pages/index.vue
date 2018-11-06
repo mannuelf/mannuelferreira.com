@@ -11,7 +11,7 @@
 
             <h3>What I do</h3>
             <p>
-              I enjoy building and designing applications for the web. I enjoy working with web technologies such as PHP, python, Node.js, Sass (Sass syntax), JavaScript.
+              I enjoy building and designing applications for the web. I enjoy working with web technologies such as JavaScript, PHP, python, Sass (Sass syntax).
               I enjoy learning and teaching web development and engineering concepts. I enjoy sports'ing football and squash.
             </p>
             <p>
@@ -35,8 +35,8 @@
 body
   font-family: arial, sans-serif
   text-align: center
-  background: #0B4F6C
-  color: #FBFBFF
+  background: #F6F8FF
+  color: #272D2D
 
 .main
   margin: 0 auto
@@ -54,7 +54,10 @@ p
   font-weight: 400
 
 a
-  color: #20BF55
+  color: #006699
+  &:hover
+    color: #FFF
+    background: #006699
 
 </style>
 <script>
