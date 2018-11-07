@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+const _b4602b2c = () => import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */).then(m => m.default || m)
 const _5f49fb3c = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 Vue.use(Router)
@@ -62,6 +63,11 @@ export function createRouter () {
     linkExactActiveClass: 'nuxt-link-exact-active',
     scrollBehavior,
     routes: [
+		{
+			path: "/inspire",
+			component: _b4602b2c,
+			name: "inspire"
+		},
 		{
 			path: "/",
 			component: _5f49fb3c,

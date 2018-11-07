@@ -11,7 +11,8 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
-import nuxt_plugin_ga_fb0a2534 from 'nuxt_plugin_ga_fb0a2534' // Source: ../plugins/ga.js (ssr: false)
+import nuxt_plugin_buefy_6e6fa766 from 'nuxt_plugin_buefy_6e6fa766' // Source: ./buefy.js
+import nuxt_plugin_axios_06e92cfc from 'nuxt_plugin_axios_06e92cfc' // Source: ./axios.js
 
 
 // Component: <no-ssr>
@@ -34,7 +35,7 @@ Vue.use(Meta, {
   tagIDKeyName: 'hid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
 })
 
-const defaultTransition = {"name":"page","mode":"out-in","appear":false,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
+const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
 
 async function createApp (ssrContext) {
   const router = await createRouter(ssrContext)
@@ -133,10 +134,9 @@ async function createApp (ssrContext) {
 
   // Plugin execution
   
+  if (typeof nuxt_plugin_buefy_6e6fa766 === 'function') await nuxt_plugin_buefy_6e6fa766(app.context, inject)
+  if (typeof nuxt_plugin_axios_06e92cfc === 'function') await nuxt_plugin_axios_06e92cfc(app.context, inject)
   
-  if (process.client) { 
-    if (typeof nuxt_plugin_ga_fb0a2534 === 'function') await nuxt_plugin_ga_fb0a2534(app.context, inject)
-  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {
