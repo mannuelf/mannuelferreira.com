@@ -3,11 +3,10 @@
 </template>
 <script>
 import { mapMutations } from 'vuex'
-
 export default {
   name: 'AboutMe',
   computed: {
-    aboutMe () {
+    aboutMe() {
       return this.$store.state.aboutMe
     }
   }
