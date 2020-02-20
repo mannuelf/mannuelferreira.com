@@ -11,7 +11,7 @@ function App() {
         <article>
           <h1>Hello world!</h1>
           <h2>My name is Mannuel Ferreira</h2>
-          <p>I'm a software engineer, currently working as lecturer teaching Front End development at <a href="https://superbalist.com" target="_blank">Noroff Fagskole</a> in Norway.
+          <p>I'm a software engineer, currently working as lecturer teaching Front End development at <a href="https://www.noroff.no/" target="_blank">Noroff Fagskole</a> in Norway.
             Previously I worked for <a href="https://superbalist.com" target="_blank">Superbalist.com</a>.</p>
           <p>I write on a blog here <a href="http://www.themwebs.me">www.themwebs.me</a></p>
           <p>
