@@ -16,7 +16,7 @@ function App() {
           <p>I write on a blog here <a href="http://www.themwebs.me">www.themwebs.me</a></p>
           <p>
             I enjoy building and designing applications for the web. I enjoy working with web technologies such as
-            JavaScript, PHP, python, Sass.
+            JavaScript, React, Vue Js, PHP, python, Sass.
             I enjoy learning and teaching web development and engineering concepts. I enjoy sports'ing football and
             squash.
           </p> <p>
