@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactGa from 'react-ga';
-import './App.css';
+import './css/App.css';
 
 ReactGa.initialize('UA-19677147-3');
 ReactGa.pageview(window.location.pathname + window.location.search);
