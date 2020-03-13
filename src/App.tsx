@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactGa from 'react-ga';
 import './css/App.css';
 import GoogleSignIn from "./components/GoogleSignIn/GoogleSignIn";
+import GooglePhotos from "./components/GooglePhotos/GooglePhotos";
 require('dotenv').config();
 
 ReactGa.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS}`);
@@ -29,6 +30,7 @@ class App extends Component<any, State> {
         <div className="main">
           <article>
             <h1>Hello world!</h1>
+            <GooglePhotos />
             <GoogleSignIn />
             <h2>My name is {this.state.name}</h2>
             <p>I'm a {this.state.occupation}, currently working as lecturer teaching Front End development at <a href="https://www.noroff.no/" target="_blank" rel="noopener noreferrer">Noroff Fagskole</a> in Norway. Previously I worked for <a href="https://superbalist.com" target="_blank" rel="noopener noreferrer">Superbalist.com</a>.</p>
