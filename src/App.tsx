@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactGa from 'react-ga';
 import './css/App.css';
-import GoogleSignIn from "./components/GoogleSignIn";
+import GoogleSignIn from "./components/GoogleSignIn/GoogleSignIn";
 require('dotenv').config();
 
 ReactGa.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS}`);
