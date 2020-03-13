@@ -1,6 +1,10 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a5dafb09-b1e0-4043-868d-3303b92ada5c/deploy-status)](https://app.netlify.com/sites/cranky-albattani-daaadc/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Create local SSL CERTIFICATE
+
+You will need a local SSL Cert to make API calls from local host, so that Google OAUTH returns 
+[Click here to read](https://www.freecodecamp.org/news/how-to-get-https-working-on-your-local-development-environment-in-5-minutes-7af615770eec)
 
 ## Living Style guide/Design system
 
