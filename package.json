@@ -11,6 +11,7 @@
     "@types/react": "^16.9.21",
     "@types/react-dom": "^16.9.5",
     "dotenv": "^8.2.0",
+    "gapi-script": "^1.0.2",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.7",
     "passport": "^0.4.1",
@@ -25,7 +26,7 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true SSL_CRT_FILE=certs/server.crt SSL_KEY_FILE=certs/server.key react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
