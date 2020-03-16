@@ -33,7 +33,6 @@ class GooglePhotos extends Component<any, any> {
           auth2Token = googleAuth.currentUser.je;
           googleAuth.isSignedIn.listen();
           isAuthorised = googleAuth.isSignedIn.je;
-          console.log("you are signed in", isAuthorised, googleAuth);
         } else {
           isAuthorised = false;
           console.log("you are signed out");
