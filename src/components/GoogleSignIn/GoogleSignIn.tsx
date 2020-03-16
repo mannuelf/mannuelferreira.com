@@ -3,7 +3,7 @@ import {gapi} from 'gapi-script';
 import {loadAuth2, loadAuth2WithProps} from 'gapi-script';
 import UserCard from "../UserCard/UserCard";
 
-class GoogleSignIn extends Component<any> {
+class GoogleSignIn extends Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {

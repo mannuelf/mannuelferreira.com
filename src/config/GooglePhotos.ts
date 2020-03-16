@@ -1,8 +1,9 @@
 let config: object = {};
 
 config = {
-  oAuthClientID: process.env.GOOGLE_CLIENT_ID,  // The OAuth client ID from the Google Developers console.
-  oAuthClientSecret: process.env.GOOGLE_CLIENT_SECRET, // The OAuth client secret from the Google Developers console.
+  apiKey: process.env.REACT_APP_GOOGLE_API_KEY,  // The OAuth client ID from the Google Developers console.
+  oAuthClientID: process.env.REACT_APP_GOOGLE_CLIENT_ID,  // The OAuth client ID from the Google Developers console.
+  oAuthClientSecret: process.env.REACT_APP_GOOGLE_CLIENT_SECRET, // The OAuth client secret from the Google Developers console.
   oAuthCallbackUrl: {
     local: process.env.REACT_APP_GOOGLE_LOCAL_REDIRECT_URI,
     production: process.env.REACT_APP_GOOGLE_PRODUCTION_REDIRECT_URI,
@@ -16,5 +17,7 @@ config = {
   albumPageSize: 10, // The page size to use for the listing albums request. 50 is recommended.
   apiEndpoint: 'https://photoslibrary.googleapis.com' // The API end point to use. Do not change.
 };
+
+console.log(config);
 
 export default config;
