@@ -29,7 +29,7 @@ class GoogleSignIn extends Component<any, any> {
 
   updateUser(currentUser) {
     let name: string = currentUser.getBasicProfile().getName();
-    let profileImage = currentUser.getBasicProfile().getImageUrl();
+    let profileImage: string = currentUser.getBasicProfile().getImageUrl();
     this.setState({
       user: {
         name: name,

@@ -18,6 +18,4 @@ config = {
   apiEndpoint: 'https://photoslibrary.googleapis.com' // The API end point to use. Do not change.
 };
 
-console.log(config);
-
 export default config;
