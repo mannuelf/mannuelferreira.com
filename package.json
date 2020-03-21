@@ -11,6 +11,7 @@
     "@types/node": "^13.9.1",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
+    "@types/react-redux": "^7.1.7",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "gapi-script": "^1.0.2",
