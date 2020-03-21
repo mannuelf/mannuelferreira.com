@@ -2,15 +2,14 @@ import React, {Component} from 'react';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import ReactGa from 'react-ga';
-import GooglePhotos from "./components/GooglePhotos/GooglePhotos";
+import GooglePhotos from './components/GooglePhotos/GooglePhotos';
+import BlogPosts from './components/BlogPosts/BlogPosts';
 
 import './css/App.css';
 require('dotenv').config();
 
 ReactGa.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS}`);
 ReactGa.pageview(window.location.pathname + window.location.search);
-
-store.dispatch({ type: "whatttup" });
 
 const initialState = {
   name: 'Mannuel Ferreira',
@@ -27,7 +26,6 @@ type State = Readonly<typeof initialState>;
 
 class App extends Component<any, State> {
   readonly state: State = initialState;
-
   render() {
     return (
       <Provider store={store}>
@@ -41,6 +39,7 @@ class App extends Component<any, State> {
               <p>I write on a blog here <a href={this.state.blog} target="_blank" rel="noopener noreferrer">www.themwebs.me</a></p>
               <p>I enjoy building and designing applications for the web. I enjoy working with web technologies such as {this.state.tools}.  I enjoy learning and teaching web development and engineering concepts. I enjoy sports'ing football and  squash.</p>
               <p>I recently launched a site called <a href="https://www.whatcoinwhichcoin.com" target="_blank" rel="noopener noreferrer">WHATcoin WHICHcoin</a>. It's a work in progress, you can view the latest bitcoin and etherium price there.</p>
+              <BlogPosts />
             </article>
             <footer>
               <h3>Follow me</h3>

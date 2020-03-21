@@ -1,10 +1,18 @@
-const initialState: object = {};
+import {GET_BLOG} from "../actionTypes";
 
-const posts: object = (state = initialState, action) => {
-    switch (action.type) {
-        default:
-            return state;
-    }
+const initialState: object = {};
+let postsReducer: object;
+
+postsReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case GET_BLOG:
+      return {
+        ...state,
+        posts: action.payload
+      };
+    default:
+      return state;
+  }
 };
 
-export default posts;
+export default postsReducer;
