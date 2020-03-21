@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import {getBlogPosts} from '../../redux/actions/posts';
 
 const BlogPosts: any = () => {
@@ -9,12 +9,20 @@ const BlogPosts: any = () => {
     dispatch(getBlogPosts());
   }, []);
 
-  const posts: object = useSelector(state => state.posts);
-  if (!posts) return <div>No blog posts today</div>;
+  const posts: object = useSelector(state => state.posts.posts);
+  const blogPosts: object = posts;
+  if (!blogPosts) return <div>Loading...</div>;
 
   return (
     <div>
-      <h2>Blog posts</h2>
+      <h2>Writing</h2>
+      {blogPosts.map((post): any => {
+        return <article key={post.id}>
+          <h3>{post.title.rendered}</h3>
+          <time>{post.modified}</time>
+          <p>{post.excerpt.rendered}</p>
+        </article>
+      })}
     </div>
   )
 };

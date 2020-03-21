@@ -34,7 +34,7 @@ class App extends Component<any, State> {
             <article>
               <h1>Hello world!</h1>
               <GooglePhotos />
-              <h2>My name is {this.state.name}</h2>
+              <h2>my name is {this.state.name}</h2>
               <p>I'm a {this.state.occupation}, currently working as lecturer teaching Front End development at <a href="https://www.noroff.no/" target="_blank" rel="noopener noreferrer">Noroff Fagskole</a> in Norway. Previously I worked for <a href="https://superbalist.com" target="_blank" rel="noopener noreferrer">Superbalist.com</a>.</p>
               <p>I write on a blog here <a href={this.state.blog} target="_blank" rel="noopener noreferrer">www.themwebs.me</a></p>
               <p>I enjoy building and designing applications for the web. I enjoy working with web technologies such as {this.state.tools}.  I enjoy learning and teaching web development and engineering concepts. I enjoy sports'ing football and  squash.</p>
