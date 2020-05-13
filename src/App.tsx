@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
 import { Provider } from 'react-redux';
+import { GlobalStyle } from './shared/GlobalStyle';
 import store from './redux/store';
 import ReactGa from 'react-ga';
-import GooglePhotos from "./components/GooglePhotos/GooglePhotos";
+import AppHeader from './components/AppHeader/AppHeader';
+import Logo from './components/Logo/Logo';
 
-import './css/App.css';
 require('dotenv').config();
 
 ReactGa.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS}`);
 ReactGa.pageview(window.location.pathname + window.location.search);
-
-store.dispatch({ type: "whatttup" });
 
 const initialState = {
   name: 'Mannuel Ferreira',
@@ -31,11 +30,13 @@ class App extends Component<any, State> {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
-          <div className="main">
+        <GlobalStyle/>
+        <AppHeader>
+          <Logo>MF</Logo>
+        </AppHeader>
+          <section className="app-main">
             <article>
               <h1>Hello world!</h1>
-              <GooglePhotos />
               <h2>My name is {this.state.name}</h2>
               <p>I'm a {this.state.occupation}, currently working as lecturer teaching Front End development at <a href="https://www.noroff.no/" target="_blank" rel="noopener noreferrer">Noroff Fagskole</a> in Norway. Previously I worked for <a href="https://superbalist.com" target="_blank" rel="noopener noreferrer">Superbalist.com</a>.</p>
               <p>I write on a blog here <a href={this.state.blog} target="_blank" rel="noopener noreferrer">www.themwebs.me</a></p>
@@ -48,8 +49,7 @@ class App extends Component<any, State> {
               <p>on <a href={this.state.twitter} target="_blank" rel="noopener noreferrer">twitter</a> if you like.</p>
               <p>on <a href={this.state.linkedin} target="_blank" rel="noopener noreferrer">linkedin</a> if that's your thing.</p>
             </footer>
-          </div>
-        </div>
+          </section>
       </Provider>
     );
   }
