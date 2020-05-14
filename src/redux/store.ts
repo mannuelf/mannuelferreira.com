@@ -6,8 +6,9 @@ import _ from 'lodash';
 import rootReducer from './rootReducer';
 
 const logger = createLogger();
-const middlewares = _.compact([thunk, freeze, logger]);
-const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
-const store = createStoreWithMiddleware(rootReducer);
+const middleWares = _.compact([thunk, freeze, logger]);
+const createStoreWithMiddleware = applyMiddleware(...middleWares)(createStore);
+let store: Store<any, AnyAction> & { dispatch: unknown };
+store = createStoreWithMiddleware(rootReducer);
 
 export default store;
