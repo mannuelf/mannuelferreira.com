@@ -33,13 +33,14 @@
     "react-dom": "^16.13.0",
     "react-ga": "^2.7.0",
     "react-redux": "^7.2.0",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-freeze": "^0.1.7",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.0",
     "tailwindcss": "^1.2.0",
     "typescript": "^3.8.3"
   },
@@ -64,6 +65,8 @@
     "@storybook/addons": "^5.3.17",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.17",
-    "@types/redux-logger": "^3.0.7"
+    "@types/redux-logger": "^3.0.7",
+    "babel-plugin-styled-components": "^1.10.7",
+    "typescript-plugin-styled-components": "^1.4.4"
   }
 }

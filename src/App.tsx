@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { GlobalStyle } from './shared/GlobalStyle';
 import store from './redux/store';
 import ReactGa from 'react-ga';
 import Blog from './pages/Blog/Blog';
 import Home from './pages/Home/Home';
-import './css/App.css';
+import AppHeader from './components/AppHeader/AppHeader';
+import Logo from './components/Logo/Logo';
+
 require('dotenv').config();
 
 ReactGa.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS}`);
 ReactGa.pageview(window.location.pathname + window.location.search);
 
-// :TODO refactor to redux, this is the make it work version
 const initialState = {
   name: 'Mannuel Ferreira',
   occupation: 'Software engineer',
@@ -41,10 +43,14 @@ class App extends Component<any> {
     return (
       <Provider store={store}>
         <Router>
-          <div className="App">
-            <div className="main">
-              <header><h1>Hi</h1></header>
-              <Switch>
+        <GlobalStyle/>
+        <AppHeader>
+          <Logo>MF</Logo>
+        </AppHeader>
+        <section className="grid">
+          <div className="grid-item">
+            <div className="inner">
+             <Switch>
                 <Route exact to="/" render={(props) => <Home details={this.state.details} />} />
                 <Route exact to="blog" component={Blog} />
               </Switch>
@@ -56,6 +62,7 @@ class App extends Component<any> {
               </footer>
             </div>
           </div>
+        </section>
         </Router>
       </Provider>
     );

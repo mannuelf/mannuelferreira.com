@@ -1,12 +1,7 @@
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
 
 body {
   margin: 0;
-  font-family: arial, sans-serif;
+  font-family: "freight-sans-pro", arial, sans-serif;
   text-align: center;
   background: #f6f8ff;
   color: #272d2d;
@@ -15,8 +10,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+  font-family: ubuntu-mono, monospace;
 }
 
 .main {
@@ -31,13 +25,20 @@ code {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Viga, sans-serif;
-  font-weight: 400
+  font-weight: 800
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+
+h2 {
+  font-size: 1.75rem;
 }
 
 p {
-  font-family: Volkhov, serif;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 400
 }
 
