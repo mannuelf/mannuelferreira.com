@@ -8,7 +8,7 @@ const Home: any = (props) => {
     <div>
       <article>
         <GooglePhotos />
-        <h2>my name is {props.details.name}</h2>
+        <h1>my name is {props.details.name}</h1>
         <p>I'm a {props.details.occupation}, working as lecturer teaching Front End development at <a href="https://www.noroff.no/" target="_blank" rel="noopener noreferrer">Noroff Fagskole</a> in Norway. Previously I worked for <a href="https://superbalist.com" target="_blank" rel="noopener noreferrer">Superbalist.com</a>.</p>
         <p>I write on a blog here <a href={props.details.blog} target="_blank" rel="noopener noreferrer">www.themwebs.me</a></p>
         <p>I enjoy building and designing applications for the web. I enjoy working with web technologies such as {props.details.tools}.  I enjoy learning and teaching web development and engineering concepts. I enjoy sports'ing football and  squash.</p>
