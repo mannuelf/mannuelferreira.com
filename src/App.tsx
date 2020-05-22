@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { GlobalStyle } from './shared/GlobalStyle';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {GlobalStyle} from './shared/GlobalStyle';
 import store from './redux/store';
 import ReactGa from 'react-ga';
+
 import Blog from './pages/Blog/Blog';
 import Home from './pages/Home/Home';
 import AppHeader from './components/AppHeader/AppHeader';
-import Logo from './components/Logo/Logo';
+import AppFooter from './components/AppFooter/AppFooter';
+import BlogPosts from "./components/BlogPosts/BlogPosts";
 
 require('dotenv').config();
 
@@ -42,27 +44,21 @@ class App extends Component<any> {
   render() {
     return (
       <Provider store={store}>
+        <AppHeader/>
         <Router>
-        <GlobalStyle/>
-        <AppHeader>
-          <Logo>MF</Logo>
-        </AppHeader>
-        <section className="grid">
-          <div className="grid-item">
-            <div className="inner">
-             <Switch>
-                <Route exact to="/" render={(props) => <Home details={this.state.details} />} />
-                <Route exact to="blog" component={Blog} />
-              </Switch>
-              <footer>
-                <h3>Follow me</h3>
-                <p><a href={this.state.details.github} target="_blank" rel="noopener noreferrer">Github</a></p>
-                <p><a href={this.state.details.twitter} target="_blank" rel="noopener noreferrer">twitter</a> if you like.</p>
-                <p><a href={this.state.details.linkedin} target="_blank" rel="noopener noreferrer">linkedin</a> if that's your thing.</p>
-              </footer>
+          <GlobalStyle/>
+          <section className="grid">
+            <div className="grid-item">
+              <div className="inner">
+                <Switch>
+                  <Route exact to="/" render={(props) => <Home details={this.state.details}/>}/>
+                  <Route exact to="blog" component={Blog}/>
+                </Switch>
+                <BlogPosts/>
+                <AppFooter/>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
         </Router>
       </Provider>
     );

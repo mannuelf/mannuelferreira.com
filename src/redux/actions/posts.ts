@@ -5,7 +5,8 @@ import {themWebs} from '../../config/ThemWebs';
 export const getBlogPosts: any = () => {
   try {
     return async (dispatch) => {
-      const results = await axios.get(`${themWebs.api.posts}`);
+      const {posts} = themWebs.api;
+      const results = await axios.get(`${posts}`);
       dispatch({
         type: "GET_BLOG",
         payload: results.data
@@ -13,5 +14,6 @@ export const getBlogPosts: any = () => {
     }
   } catch (e) {
     console.log(e);
+    throw new Error('kablam!')
   }
 };
