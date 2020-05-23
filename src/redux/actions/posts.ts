@@ -1,19 +1,37 @@
-import {GET_BLOG} from "../actionTypes";
+import {
+  GET_BLOG_POSTS,
+  GET_BLOG_POST
+} from "../actionTypes";
+import {THEMWEBS} from '../../config/THEMWEBS';
 import axios from 'axios';
-import {themWebs} from '../../config/ThemWebs';
 
 export const getBlogPosts: any = () => {
   try {
     return async (dispatch) => {
-      const {posts} = themWebs.api;
+      const {posts} = THEMWEBS.API;
       const results = await axios.get(`${posts}`);
       dispatch({
-        type: "GET_BLOG",
+        type: "GET_BLOG_POSTS",
         payload: results.data
       });
     }
   } catch (e) {
-    console.log(e);
-    throw new Error('kablam!')
+    console.log(e.message);
+    throw new Error('kablam!');
   }
 };
+
+export const getBlogPost: any = id => async dispatch => {
+  console.log("🟢 getting:", id,)
+  try {
+    const {posts} = THEMWEBS.API;
+    const post = await axios.get(`${posts}/${id}`);
+    dispatch({
+      type: 'GET_BLOG_POST',
+      payload: post.data
+    });
+  } catch (e) {
+    console.log(e.message);
+    throw new Error('kablam!');
+  }
+}

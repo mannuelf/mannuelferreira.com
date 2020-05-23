@@ -5,11 +5,11 @@ import {GlobalStyle} from './shared/GlobalStyle';
 import store from './redux/store';
 import ReactGa from 'react-ga';
 
-import Blog from './pages/Blog/Blog';
 import Home from './pages/Home/Home';
 import AppHeader from './components/AppHeader/AppHeader';
 import AppFooter from './components/AppFooter/AppFooter';
 import BlogPosts from "./components/BlogPosts/BlogPosts";
+import BlogPostItem from "./components/BlogPosts/BlogPostItem";
 
 require('dotenv').config();
 
@@ -52,7 +52,8 @@ class App extends Component<any> {
               <div className="inner">
                 <Switch>
                   <Route exact to="/" render={(props) => <Home details={this.state.details}/>}/>
-                  <Route exact to="blog" component={Blog}/>
+                  <Route exact to="/blog" component={BlogPosts}/>
+                  <Route exact to="/blog/:id" component={BlogPostItem}/>
                 </Switch>
                 <BlogPosts/>
                 <AppFooter/>

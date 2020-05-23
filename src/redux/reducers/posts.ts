@@ -1,15 +1,31 @@
-import {GET_BLOG} from "../actionTypes";
+import {
+  GET_BLOG_POSTS,
+  GET_BLOG_POST
+} from "../actionTypes";
 
-const initialState: object = {};
+const initialState: object = {
+  posts: [],
+  post: null,
+  loading: true,
+  error: {}
+};
+
 let postsReducer: object;
 
-postsReducer = (state = initialState, action) => {
+postsReducer = (state = initialState, action: { type: any; payload: any; }) => {
   switch (action.type) {
-    case GET_BLOG:
+    case GET_BLOG_POSTS:
       return {
         ...state,
-        posts: action.payload
+        posts: action.payload,
+        loading: false
       };
+    case GET_BLOG_POST:
+      return {
+        ...state,
+        post: action.payload,
+        loading: false
+      }
     default:
       return state;
   }

@@ -4,7 +4,7 @@ import posts from './reducers/posts';
 let rootReducer: object;
 
 rootReducer = combineReducers({
-  posts
+  posts: posts
 });
 
 export default rootReducer;
