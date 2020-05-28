@@ -6,13 +6,14 @@ import {theme} from "../../shared/GlobalStyle";
 const StyledLogo = styled.a`
   display: block;
   background-color: transparent;
-  width: 120px;
+  width: 96px;
   color: ${theme.color.lightestGrey};
   font-size: 2.9rem;
   line-height: 48px;
 
   img {
     width: 100%;
+    margin: 4px 0;
   }
 `;
 
