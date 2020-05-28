@@ -1,6 +1,6 @@
 export const THEMWEBS: object = {
-  API: {
+ api: {
     posts: process.env.REACT_APP_THEMWEBS_API_POSTS,
-    pages: process.env.REACT_APP_THEMWEBS_API_PAGES,
+    pages: process.env.REACT_APP_THEMWEBS_API_PAGES
   }
 };

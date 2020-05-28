@@ -11,7 +11,9 @@ const StyledAppHeader = styled.header`
 `;
 
 const AppHeader: any = () => <StyledAppHeader>
-  <Logo />
+  <div className="container">
+    <Logo/>
+  </div>
 </StyledAppHeader>
 
 export default AppHeader;

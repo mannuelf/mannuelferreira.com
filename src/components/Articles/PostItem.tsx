@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getBlogPost} from "../../redux/actions/posts";
 
-const BlogPostItem = () => {
+const PostItem = () => {
   const post: object = useSelector(state => state.post.post);
   const blogPost: object = post;
 
@@ -14,4 +14,4 @@ const BlogPostItem = () => {
   );
 };
 
-export default BlogPostItem;
+export default PostItem;

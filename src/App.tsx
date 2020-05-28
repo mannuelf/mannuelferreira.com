@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import {GlobalStyle} from './shared/GlobalStyle';
+import Routes from "./components/Routes/Routes";
+import Home from './pages/Home/Home';
 import store from './redux/store';
 import ReactGa from 'react-ga';
-
-import Home from './pages/Home/Home';
-import AppHeader from './components/AppHeader/AppHeader';
-import AppFooter from './components/AppFooter/AppFooter';
-import BlogPosts from "./components/BlogPosts/BlogPosts";
-import BlogPostItem from "./components/BlogPosts/BlogPostItem";
+import {GlobalStyle} from './shared/GlobalStyle';
+import AppHeader from "./components/AppHeader/AppHeader";
+import AppFooter from "./components/AppFooter/AppFooter";
 
 require('dotenv').config();
 
@@ -27,43 +25,20 @@ const initialState = {
   message: 'TypeScript is cool man'
 };
 
-class App extends Component<any> {
-  constructor(props) { // :TODO refactor to redux
-    super(props);
-    this.state = {
-      details: {}
-    };
-  }
-
-  componentWillMount(): void {
-    this.setState({
-      details: initialState,
-    })
-  }
-
-  render() {
-    return (
-      <Provider store={store}>
+const App = (): any => {
+  return (
+    <Provider store={store}>
+      <GlobalStyle/>
+      <Router>
         <AppHeader/>
-        <Router>
-          <GlobalStyle/>
-          <section className="grid">
-            <div className="grid-item">
-              <div className="inner">
-                <Switch>
-                  <Route exact to="/" render={(props) => <Home details={this.state.details}/>}/>
-                  <Route exact to="/blog" component={BlogPosts}/>
-                  <Route exact to="/blog/:id" component={BlogPostItem}/>
-                </Switch>
-                <BlogPosts/>
-                <AppFooter/>
-              </div>
-            </div>
-          </section>
-        </Router>
-      </Provider>
-    );
-  }
+        <Switch>
+          <Route exact to="/" component={Home}/>
+          <Route component={Routes}/>
+        </Switch>
+        <AppFooter/>
+      </Router>
+    </Provider>
+  );
 }
 
 export default App;
