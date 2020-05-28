@@ -1,5 +1,4 @@
 import React from 'react';
-console.log("Blog Page");
 
 const Blog = (props) => {
   return(

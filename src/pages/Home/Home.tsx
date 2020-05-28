@@ -5,7 +5,7 @@ const Home: any = () => {
   return (
     <section>
       <div className="container">
-        <h1>my name is {HomePanel.name}</h1>
+        <h1>Hi, my name is {HomePanel.name}</h1>
         <p>I'm a {HomePanel.occupation}. I teach Front End development at <a href="https://www.noroff.no/"
                                                                              target="_blank" rel="noopener noreferrer">Noroff
           Fagskole</a> in Norway.

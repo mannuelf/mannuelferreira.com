@@ -91,6 +91,8 @@ export const GlobalStyle = createGlobalStyle`
     .container {
       padding-top: ${theme.space.five};
       padding-bottom: ${theme.space.five};
+
+
     }
   }
 `;
