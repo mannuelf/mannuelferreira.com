@@ -1,16 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import svgLogo from "../../assets/logo.svg";
+import {theme} from "../../shared/GlobalStyle";
 
 const StyledLogo = styled.a`
-  font-weight: 800;
+  display: block;
   background-color: transparent;
-  color: #8fffff;
+  width: 120px;
+  color: ${theme.color.lightestGrey};
   font-size: 2.9rem;
   line-height: 48px;
+
+  img {
+    width: 100%;
+  }
 `;
 
 const Logo = () => {
-  return <StyledLogo>MF</StyledLogo>;
+  return <StyledLogo>
+      <img src={svgLogo} alt="Mannuel Ferreira"/>
+  </StyledLogo>;
 };
 
 export default Logo;

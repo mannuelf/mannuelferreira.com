@@ -32,12 +32,16 @@ export const theme = {
     'four': '24px',
     'five': '32px',
     'six': '48px',
+  },
+  font: {
+    primary: "freight-sans-pro",
+    secondary: "arial, sans-serif"
   }
 }
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: "freight-sans-pro", arial, sans-serif;
+    font-family: ${theme.font.primary},${theme.font.secondary};
     text-align: center;
     background: ${theme.color.lightestGrey};
     color: ${theme.color.black};
