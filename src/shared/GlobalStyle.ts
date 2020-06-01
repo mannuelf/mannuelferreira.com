@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const theme = {
   color: {
@@ -25,19 +25,27 @@ export const theme = {
     laptop: "1025px",
     desktop: "1280px"
   },
+  height: {
+    eight: "8px",
+    twelve: "12px",
+    sixteen: "16px",
+    twentyFour: "24px",
+    thirtyTwo: "32px",
+    fourtyEight: "48px"
+  },
   space: {
-    'one': '8px',
-    'two': '12px',
-    'three': '16px',
-    'four': '24px',
-    'five': '32px',
-    'six': '48px',
+    one: "8px",
+    two: "12px",
+    three: "16px",
+    four: "24px",
+    five: "32px",
+    six: "48px"
   },
   font: {
     primary: "freight-sans-pro",
     secondary: "arial, sans-serif"
   }
-}
+};
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -54,9 +62,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .container {
-    margin: 0 auto;
-    max-width: 1070px;
-    width: 100%;
+    padding: 0 ${theme.space.three};
+  }
+
+  .app-header {
+    border-bottom: 3px solid ${theme.color.black};
+    text-align: left;
+    line-height: ${theme.height.fourtyEight};
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -71,26 +83,12 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 24px;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer"
-  }
-
   .app-footer {
     background: ${theme.color.spaceCadetDark};
     color: ${theme.color.lightestGrey};
 
     & a {
       color: ${theme.color.lightestGrey}
-    }
-
-    .container {
-      padding-top: ${theme.space.five};
-      padding-bottom: ${theme.space.five};
     }
   }
 `;
