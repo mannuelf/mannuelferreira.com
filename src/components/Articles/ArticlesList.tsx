@@ -8,7 +8,7 @@ const ArticlesList: any = () => {
 
   useEffect((): void => {
     dispatch(getBlogPosts());
-  }, []);
+  }, [getBlogPosts]);
 
   const posts: object = useSelector(state => state.posts.posts);
   const blogPosts: object = posts;

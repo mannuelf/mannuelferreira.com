@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import Routes from "./components/Routes/Routes";
+import LogRocket from "logrocket";
 import Home from "./pages/Home/Home";
 import store from "./redux/store";
 import ReactGa from "react-ga";
