@@ -13,6 +13,7 @@ const Routes = () => {
             <div className="grid-item">
               <div className="inner">
                 <Home />
+                <ArticlesList />
               </div>
             </div>
           </section>

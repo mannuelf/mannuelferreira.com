@@ -22,11 +22,11 @@ const ArticlesList: any = () => {
         return (
           <article key={post.id} className="articles-list">
             <time>{post.modified}</time>
-            <h3>{post.title.rendered}</h3>
+            <h2>{post.title.rendered}</h2>
             <p>{post.excerpt.rendered}</p>
 
             <Link
-              onClick={e => getBlogPost(`${post.id}`)}
+              onClick={() => getBlogPost(`${post.id}`)}
               to={`/articles/${post.id}`}
             >
               Read more

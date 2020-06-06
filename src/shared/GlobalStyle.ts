@@ -61,10 +61,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ubuntu-mono, monospace;
   }
 
-  .container {
-    padding: 0 ${theme.space.three};
-  }
-
   .app-header {
     border-bottom: 3px solid ${theme.color.black};
     text-align: left;

@@ -1,12 +1,12 @@
 import { GET_BLOG_POSTS, GET_BLOG_POST } from "../actionTypes";
 import { THEMWEBS } from "../../config/themwebs";
-import axios from "axios";
+import Axios from "axios";
 
 export const getBlogPosts: any = () => {
   try {
     return async dispatch => {
       const { posts } = THEMWEBS.api;
-      const results = await axios.get(`${posts}`);
+      const results = await Axios.get(`${posts}`);
       dispatch({
         type: "GET_BLOG_POSTS",
         payload: results.data
@@ -21,7 +21,7 @@ export const getBlogPosts: any = () => {
 export const getBlogPost: any = id => async dispatch => {
   try {
     const { posts } = THEMWEBS.api;
-    const post = await axios.get(`${posts}/${id}`);
+    const post = await Axios.get(`${posts}/${id}`);
     dispatch({
       type: "GET_BLOG_POST",
       payload: post.data
