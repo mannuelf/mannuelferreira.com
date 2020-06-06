@@ -2,16 +2,14 @@ import { GET_BLOG_POSTS, GET_BLOG_POST } from "../actionTypes";
 import { THEMWEBS } from "../../config/themwebs";
 import Axios from "axios";
 
-export const getBlogPosts: any = () => {
+export const getBlogPosts: any = () => async dispatch => {
   try {
-    return async dispatch => {
-      const { posts } = THEMWEBS.api;
-      const results = await Axios.get(`${posts}`);
-      dispatch({
-        type: "GET_BLOG_POSTS",
-        payload: results.data
-      });
-    };
+    const { posts } = THEMWEBS.api;
+    const results = await Axios.get(`${posts}`);
+    dispatch({
+      type: "GET_BLOG_POSTS",
+      payload: results.data
+    });
   } catch (e) {
     console.log(e.message);
     throw new Error("kablam!");
