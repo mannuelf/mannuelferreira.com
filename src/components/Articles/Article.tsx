@@ -1,6 +1,6 @@
 import React, { useEffect, Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getBlogPost } from "../../redux/actions/posts";
+import { getBlogPost } from "../../redux/actions/articles";
 
 const PostItem = ({ getBlogPost, posts: { post, loading }, match }) => {
   const post: object = useSelector(state => state.posts.post);

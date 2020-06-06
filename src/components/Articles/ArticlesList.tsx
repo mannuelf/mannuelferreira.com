@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getBlogPost, getBlogPosts } from "../../redux/actions/posts";
+import { getBlogPost, getBlogPosts } from "../../redux/actions/articles";
 import { Link } from "react-router-dom";
 
 const ArticlesList: any = () => {
