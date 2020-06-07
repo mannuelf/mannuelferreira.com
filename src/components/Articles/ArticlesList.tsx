@@ -23,34 +23,36 @@ const ArticlesList: any = () => {
     <section className="app-row py-10">
       <div className="container mx-auto">
         <h1 className="article-header text-5xl">Articles</h1>
-        {!blogPosts
-          ? "Loading..."
-          : blogPosts.map((post: any): any => {
-              return (
-                <article
-                  key={post.id}
-                  className="articles-list text-left pb-10"
-                >
-                  <time>{post.modified}</time>
-                  <Link
-                    onClick={() => getBlogPost(`${post.id}`)}
-                    to={`/articles/${post.id}`}
+        <div className="flex flex-wrap -mb-4">
+          {!blogPosts
+            ? "Loading..."
+            : blogPosts.map((post: any): any => {
+                return (
+                  <article
+                    key={post.id}
+                    className="articles-list text-left pb-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/3 mb-4 px-2"
                   >
-                    <h2
-                      className="text-3xl font-semibold"
+                    <time>{post.modified}</time>
+                    <Link
+                      onClick={() => getBlogPost(`${post.id}`)}
+                      to={`/articles/${post.id}`}
+                    >
+                      <h2
+                        className="text-3xl font-semibold"
+                        dangerouslySetInnerHTML={createMarkup(
+                          post.title.rendered
+                        )}
+                      ></h2>
+                    </Link>
+                    <p
                       dangerouslySetInnerHTML={createMarkup(
-                        post.title.rendered
+                        post.excerpt.rendered
                       )}
-                    ></h2>
-                  </Link>
-                  <p
-                    dangerouslySetInnerHTML={createMarkup(
-                      post.excerpt.rendered
-                    )}
-                  ></p>
-                </article>
-              );
-            })}
+                    ></p>
+                  </article>
+                );
+              })}
+        </div>
       </div>
     </section>
   );

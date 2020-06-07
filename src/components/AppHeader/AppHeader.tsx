@@ -11,7 +11,7 @@ const StyledAppHeader = styled.header`
 `;
 
 const AppHeader: any = () => (
-  <StyledAppHeader className="header">
+  <StyledAppHeader className="header sm:pr-6 md:pb-4">
     <div className="container mx-auto">
       <Logo />
     </div>
