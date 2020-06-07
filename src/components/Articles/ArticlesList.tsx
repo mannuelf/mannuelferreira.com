@@ -13,28 +13,39 @@ const ArticlesList: any = () => {
   const posts: object = useSelector(state => state.posts.posts);
   const blogPosts: object = posts;
 
+  function createMarkup(markUp) {
+    return { __html: markUp };
+  }
+
   if (!blogPosts) return <div>Loading...</div>;
 
   return (
-    <div className="container">
-      <h1 className="app-header">Articles</h1>
-      {blogPosts.map((post: any): any => {
-        return (
-          <article key={post.id} className="articles-list">
-            <time>{post.modified}</time>
-            <h2>{post.title.rendered}</h2>
-            <p>{post.excerpt.rendered}</p>
-
-            <Link
-              onClick={() => getBlogPost(`${post.id}`)}
-              to={`/articles/${post.id}`}
-            >
-              Read more
-            </Link>
-          </article>
-        );
-      })}
-    </div>
+    <section className="app-row py-10">
+      <div className="container mx-auto">
+        <h1 className="article-header">Articles</h1>
+        <div dangerouslySetInnerHTML={createMarkup()}></div>
+        {blogPosts.map((post: any): any => {
+          return (
+            <article key={post.id} className="articles-list text-left">
+              <time>{post.modified}</time>
+              <h2
+                className="text-4xl font-semibold"
+                dangerouslySetInnerHTML={createMarkup(post.title.rendered)}
+              ></h2>
+              <p
+                dangerouslySetInnerHTML={createMarkup(post.excerpt.rendered)}
+              ></p>
+              <Link
+                onClick={() => getBlogPost(`${post.id}`)}
+                to={`/articles/${post.id}`}
+              >
+                Read more
+              </Link>
+            </article>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

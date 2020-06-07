@@ -7,13 +7,15 @@ const StyledAppHeader = styled.header`
   flex-direction: row;
   flex-wrap: nowrap;
   height: 48px;
-  background-color: #28284F;
+  background-color: #28284f;
 `;
 
-const AppHeader: any = () => <StyledAppHeader>
-  <div className="container">
-    <Logo/>
-  </div>
-</StyledAppHeader>
+const AppHeader: any = () => (
+  <StyledAppHeader className="header">
+    <div className="container mx-auto">
+      <Logo />
+    </div>
+  </StyledAppHeader>
+);
 
 export default AppHeader;

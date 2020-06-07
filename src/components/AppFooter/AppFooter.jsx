@@ -2,8 +2,8 @@ import React from "react";
 
 const AppFooter = () => {
   return (
-    <footer className="app-footer">
-      <div className="container">
+    <footer className="app-footer py-10">
+      <div className="container mx-auto">
         <h3>Follow me</h3>
         <p>
           <a

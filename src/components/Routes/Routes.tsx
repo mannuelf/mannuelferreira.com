@@ -6,20 +6,12 @@ import Home from "../../pages/Home/Home";
 
 const Routes = () => {
   return (
-    <section className="container mx-auto">
-      <Switch>
-        <Router>
-          <section className="grid">
-            <div className="grid-item">
-              <div className="inner">
-                <Home />
-                <ArticlesList />
-              </div>
-            </div>
-          </section>
-        </Router>
-      </Switch>
-    </section>
+    <Switch>
+      <Router>
+        <Home />
+        <ArticlesList />
+      </Router>
+    </Switch>
   );
 };
 
