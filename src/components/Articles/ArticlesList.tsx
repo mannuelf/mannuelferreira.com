@@ -23,15 +23,15 @@ const ArticlesList: any = () => {
   return (
     <section className="app-row p-10">
       <div className="container mx-auto">
-        <h1 className="article-header text-5xl pb-8">Articles</h1>
-        <div className="flex flex-wrap -mb-4">
+        <h1 className="article-header text-5xl">Articles</h1>
+        <div className="flex flex-wrap -mb-4 pt-10">
           {!blogPosts
             ? "Loading..."
             : blogPosts.map((post: any): any => {
                 return (
                   <article
                     key={post.id}
-                    className="articles-list text-left pb-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/3 mb-4 px-2"
+                    className="articles-list text-left pb-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/3 mb-4 px-4"
                   >
                     <time>
                       {moment(post.modified).format("ddd, MMM Do YYYY")}
@@ -41,7 +41,7 @@ const ArticlesList: any = () => {
                       to={`/articles/${post.id}`}
                     >
                       <h2
-                        className="text-3xl font-semibold"
+                        className="text-3xl font-semibold leading-7 pb-5"
                         dangerouslySetInnerHTML={createMarkup(
                           post.title.rendered
                         )}

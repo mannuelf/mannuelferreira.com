@@ -7,7 +7,7 @@ const AppFooter = () => {
       <div className="container mx-auto">
         <div className="flex">
           <div className="app-footer-col">
-            <h3 className="text-2xl">Follow me</h3>
+            <h3 className="text-2xl pb-3">Follow me</h3>
             <ul>
               <li>
                 <a
