@@ -47,11 +47,12 @@ const ArticlesList: any = () => {
                         )}
                       ></h2>
                     </Link>
-                    <p
+                    <div
+                      className="break-words"
                       dangerouslySetInnerHTML={createMarkup(
                         post.excerpt.rendered
                       )}
-                    ></p>
+                    ></div>
                   </article>
                 );
               })}

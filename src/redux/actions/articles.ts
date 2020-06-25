@@ -7,7 +7,7 @@ export const getBlogPosts: any = () => async dispatch => {
     const { posts } = THEMWEBS.api;
     const results = await Axios.get(`${posts}`);
     dispatch({
-      type: "GET_BLOG_POSTS",
+      type: GET_BLOG_POSTS,
       payload: results.data
     });
   } catch (e) {
@@ -21,7 +21,7 @@ export const getBlogPost: any = id => async dispatch => {
     const { posts } = THEMWEBS.api;
     const post = await Axios.get(`${posts}/${id}`);
     dispatch({
-      type: "GET_BLOG_POST",
+      type: GET_BLOG_POST,
       payload: post.data
     });
   } catch (e) {
