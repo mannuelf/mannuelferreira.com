@@ -25,7 +25,7 @@ export const getBlogPost: any = id => async dispatch => {
       payload: post.data
     });
   } catch (e) {
-    console.log(e.message);
+    console.log(e);
     throw new Error("kablam!");
   }
 };

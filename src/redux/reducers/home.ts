@@ -1,5 +1,3 @@
-import { GET_HOME } from "../actionTypes";
-
 const initialState = {
   name: "Mannuel Ferreira",
   occupation: "Software engineer",

@@ -2,7 +2,7 @@ import { GET_BLOG_POST, GET_BLOG_POSTS } from "../actionTypes";
 
 interface InitialState {
   posts: Array<any>;
-  post: Object;
+  post: Array<any>;
   loading: boolean;
   error: object;
 }

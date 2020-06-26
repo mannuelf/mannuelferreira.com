@@ -9,7 +9,7 @@ const ArticlesList: any = () => {
 
   useEffect((): void => {
     dispatch(getBlogPosts());
-  }, [getBlogPosts]);
+  }, [dispatch]);
 
   const posts: object = useSelector(state => state.posts.posts);
   const blogPosts: object = posts;
@@ -21,7 +21,7 @@ const ArticlesList: any = () => {
   if (!blogPosts) return <div>Loading...</div>;
 
   return (
-    <section className="app-row p-10">
+    <section className="app-row pt-10 pb-10 pr-5 pl-5">
       <div className="container mx-auto">
         <h1 className="article-header text-5xl">Articles</h1>
         <div className="flex flex-wrap -mb-4 pt-10">
@@ -31,14 +31,14 @@ const ArticlesList: any = () => {
                 return (
                   <article
                     key={post.id}
-                    className="articles-list text-left pb-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/3 mb-4 px-4"
+                    className="articles-list text-left pb-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/3 mb-4 sm:px-0 md:px-0 lg:pr-4"
                   >
                     <time>
                       {moment(post.modified).format("ddd, MMM Do YYYY")}
                     </time>
                     <Link
                       onClick={() => getBlogPost(`${post.id}`)}
-                      to={`/articles/${post.id}`}
+                      to={`/article/${post.id}`}
                     >
                       <h2
                         className="text-3xl font-semibold leading-7 pb-5"
