@@ -14,6 +14,7 @@ import ArticlesList from "./components/Articles/ArticlesList";
 import NotFound from "./components/NotFound/NotFound";
 
 require("dotenv").config();
+
 LogRocket.init(`${process.env.REACT_APP_LOG_ROCKET_ID}/mannueferreiracom`);
 ReactGa.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS}`);
 ReactGa.pageview(window.location.pathname + window.location.search);

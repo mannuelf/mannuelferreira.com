@@ -1,3 +1,29 @@
 @tailwind base;
+
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h3 {
+  @apply text-3xl;
+}
+
+p a {
+  background: hsla(0, 0%, 97%, 100%);
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0 10px 0 10px;
+  color: #2d2b56;
+  word-break: break-word;
+}
+
+p a:hover {
+  background: hsla(342, 60%, 96%, 100%);
+}
+
 @tailwind components;
 @tailwind utilities;

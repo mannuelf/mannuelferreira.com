@@ -12,8 +12,6 @@ const Article = ({ match }) => {
 
   const post = useSelector(state => state.posts.post);
 
-  console.log(typeof post, post);
-
   const createMarkup: any = markUp => {
     return { __html: markUp };
   };
