@@ -5,7 +5,7 @@ import Axios from "axios";
 export const getBlogPosts: any = () => async dispatch => {
   try {
     const { posts } = THEMWEBS.api;
-    const results = await Axios.get(`${posts}`);
+    const results = await Axios.get(`${posts}/?per_page=9`);
     dispatch({
       type: GET_BLOG_POSTS,
       payload: results.data
