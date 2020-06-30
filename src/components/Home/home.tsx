@@ -4,7 +4,7 @@ import HomePanel from "../../redux/reducers/home";
 const Home: any = () => {
   return (
     <section className="app-row p-10 bg-gray-200 md:pr-6 md:pl-6">
-      <div className="container mx-auto">
+      <div className="container mx-auto w-1/2">
         <h1 className="text-4xl leading-10 pb-5">
           Hi, my name is {HomePanel.name}
         </h1>
@@ -15,15 +15,16 @@ const Home: any = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Noroff Fagskole
-          </a>{" "}
-          in Norway. Previously I worked for{" "}
+            Noroff Fagskole <i className="fa fa-external-link-alt text-sm"></i>
+          </a>
+          , previously I'd spent my days and some times evenings helping build and maintain a fashion
+          e-commerce store in South Africa{" "}
           <a
             href="https://superbalist.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Superbalist.com
+            Superbalist.com <i className="fa fa-external-link-alt text-sm"></i>
           </a>
           .
         </p>
@@ -43,8 +44,8 @@ const Home: any = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            WHATcoin WHICHcoin
-          </a>
+            WHATcoin WHICHcoin <i className="fa fa-external-link-alt text-sm"></i>
+        </a>
           . It's a work in progress, you can view the latest bitcoin and
           etherium price there.
         </p>

@@ -12,6 +12,7 @@ import About from "./components/About/about";
 import Article from "./components/Articles/Article";
 import ArticlesList from "./components/Articles/ArticlesList";
 import NotFound from "./components/NotFound/NotFound";
+import addScript from "./customHooks/addScript";
 
 require("dotenv").config();
 
@@ -20,6 +21,7 @@ ReactGa.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS}`);
 ReactGa.pageview(window.location.pathname + window.location.search);
 
 const App = (): any => {
+  addScript("https://kit.fontawesome.com/7843276ca8.js");
   return (
     <Provider store={store}>
       <GlobalStyle />

@@ -18,7 +18,7 @@ const StyledLogo = styled.a`
 
 const Logo = () => {
   return (
-    <StyledLogo>
+    <StyledLogo href="/">
       <img src={svgLogo} alt="Mannuel Ferreira" />
     </StyledLogo>
   );

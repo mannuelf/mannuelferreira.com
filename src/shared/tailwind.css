@@ -34,8 +34,15 @@ p a {
 p a:hover {
   background: hsla(342, 60%, 96%, 100%);
 }
-a:hover {
+
+.app-footer a, a:link {
+  transition: all 0.3s ease-in-out;
+}
+
+.app-footer a, a:hover {
+  transition: all 0.3s ease-in-out;
   color: #ff9d00;
 }
+
 @tailwind components;
 @tailwind utilities;
