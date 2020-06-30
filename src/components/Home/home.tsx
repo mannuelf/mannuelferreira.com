@@ -4,7 +4,7 @@ import HomePanel from "../../redux/reducers/home";
 const Home: any = () => {
   return (
     <section className="app-row p-10 bg-gray-200 md:pr-6 md:pl-6">
-      <div className="container mx-auto w-1/2">
+      <div className="container mx-auto w-full w-1/2">
         <h1 className="text-4xl leading-10 pb-5">
           Hi, my name is {HomePanel.name}
         </h1>
