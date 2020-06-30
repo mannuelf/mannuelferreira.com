@@ -32,7 +32,6 @@ const Article = ({ match }) => {
             </article>
             <aside className="w-full sm:w-1/2 md:w-1/3 lg:1/3 xl:1/3 text-left mt-10 pl-10 border-solid border-gray-400 border-l">
               <h1 className="text-3xl">...</h1>
-
             </aside>
           </div>
         </div>
