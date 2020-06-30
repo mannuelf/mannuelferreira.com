@@ -6,7 +6,7 @@ const AppFooter = () => {
   return (
     <footer className="app-footer p-10">
       <div className="container mx-auto">
-        <div className="flex justify-start -mx-2">
+        <div className="flex flex-wrap justify-start -mx-2">
           <FooterSocial />
           <FooterCopyright />
         </div>

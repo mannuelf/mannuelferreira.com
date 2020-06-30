@@ -2,7 +2,7 @@ import React from "react";
 
 const FooterSocial = () => {
   return (
-    <div className="w-full sm:w-1/2 md:w-1/3 text-left">
+    <div className="w-full sm:w-1/2 md:w-1/3 text-left pb-10">
       <h3 className="text-2xl pb-3">Follow me</h3>
       <ul className="flex">
         <li className="pr-4">
