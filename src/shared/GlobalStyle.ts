@@ -95,4 +95,8 @@ export const GlobalStyle = createGlobalStyle`
       color: ${theme.color.lightestGrey}
     }
   }
+
+  .wp-block-image {
+    padding-bottom: ${theme.height.sixteen}
+  }
 `;
