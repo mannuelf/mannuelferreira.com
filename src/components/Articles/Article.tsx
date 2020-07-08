@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getBlogPost, getBlogPostImage } from "../../redux/actions/articles";
+import { getBlogPost } from "../../redux/actions/articles";
 
 const Article = ({ match }) => {
   const dispatch = useDispatch();
