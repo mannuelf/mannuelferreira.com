@@ -4,7 +4,7 @@ import { getBlogPost, getBlogPostImage } from "../../redux/actions/articles";
 
 const Article = ({ match }) => {
   const dispatch = useDispatch();
-  //const blogPostId = match.params.id;
+  const blogPostId = match.params.id;
   //const blogPostImageId = 115;
 
   useEffect(() => {
@@ -14,7 +14,6 @@ const Article = ({ match }) => {
 
   const post = useSelector(state => state.posts.post);
   //const postImage = useSelector(state => state.postImg);
-  console.log(postImage);
 
   const createMarkup: any = markUp => {
     return { __html: markUp };
