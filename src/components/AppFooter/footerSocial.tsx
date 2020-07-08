@@ -16,6 +16,15 @@ const FooterSocial = () => {
         </li>
         <li className="pr-4">
           <a
+            href="https://codepen.io/mannuelf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa fa-codepen text-3xl"></i>
+          </a>
+        </li>
+        <li className="pr-4">
+          <a
             href="https://twitter.com/manidf"
             target="_blank"
             rel="noopener noreferrer"
