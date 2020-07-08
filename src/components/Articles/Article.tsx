@@ -1,16 +1,20 @@
 import React, { Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getBlogPost } from "../../redux/actions/articles";
+import { getBlogPost, getBlogPostImage } from "../../redux/actions/articles";
 
 const Article = ({ match }) => {
   const dispatch = useDispatch();
-  const blogPostId = match.params.id;
+  //const blogPostId = match.params.id;
+  //const blogPostImageId = 115;
 
   useEffect(() => {
     dispatch(getBlogPost(blogPostId));
+    //dispatch(getBlogPostImage(blogPostImageId));
   }, [dispatch, blogPostId]);
 
   const post = useSelector(state => state.posts.post);
+  //const postImage = useSelector(state => state.postImg);
+  console.log(postImage);
 
   const createMarkup: any = markUp => {
     return { __html: markUp };
@@ -24,7 +28,7 @@ const Article = ({ match }) => {
         <div className="container mx-auto">
           <h1 className="article-header text-5xl">{post.title.rendered}</h1>
           <div className="flex flex-wrap">
-            <article className="w-full sm:w-full md:w-full lg:flex-1 xl:flex-1 text-left mt-10 pr-10">
+            <article className="w-full sm:w-full md:w-full lg:flex-1 xl:flex-1 text-left mt-10 sm:pr-0 md:pr-10">
               <div
                 className="break-words"
                 dangerouslySetInnerHTML={createMarkup(post.content.rendered)}
