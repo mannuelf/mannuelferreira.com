@@ -4,7 +4,7 @@ import HomePanel from "../../redux/reducers/home";
 const Home: any = () => {
   return (
     <section className="app-row p-10 bg-gray-200 md:pr-6 md:pl-6">
-      <div className="container mx-auto w-full sm:w-1/1 md:w-1/1 lg:w-1/2 xl:w-1/2">
+      <div className="container mx-auto w-full sm:w-1/1 md:w-2/3">
         <h1 className="text-4xl leading-10 pb-5">
           Hi, my name is {HomePanel.name}
         </h1>
@@ -17,8 +17,8 @@ const Home: any = () => {
           >
             Noroff Fagskole <i className="fa fa-external-link-alt text-sm"></i>
           </a>
-          , previously I'd spent my days and some times evenings helping build and maintain a fashion
-          e-commerce store in South Africa{" "}
+          , previously I'd spent my days and some times evenings helping build
+          and maintain a fashion e-commerce store in South Africa{" "}
           <a
             href="https://superbalist.com"
             target="_blank"
@@ -34,20 +34,8 @@ const Home: any = () => {
           teaching web development and engineering concepts.
         </p>
         <p>
-          If I go outside you might find me playing football, squash or eating
-          something delicious in a random restaurant.
-        </p>
-        <p>
-          I recently launched a site called{" "}
-          <a
-            href="https://www.whatcoinwhichcoin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WHATcoin WHICHcoin <i className="fa fa-external-link-alt text-sm"></i>
-        </a>
-          . It's a work in progress, you can view the latest bitcoin and
-          etherium price there.
+          When I go outside I enjoy kick about 5 aside football or full field. I
+          do love a quash match too.
         </p>
       </div>
     </section>
