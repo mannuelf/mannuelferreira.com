@@ -35,7 +35,7 @@ const Home: any = () => {
         </p>
         <p>
           When I go outside I enjoy kick about 5 aside football or full field. I
-          do love a quash match too.
+          do love a squash match too.
         </p>
       </div>
     </section>
