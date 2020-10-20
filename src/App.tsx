@@ -10,7 +10,6 @@ import AppFooter from "./components/AppFooter/AppFooter";
 import Home from "./components/Home/home";
 import About from "./components/About/about";
 import Article from "./components/Articles/Article";
-import ArticlesList from "./components/Articles/ArticlesList";
 import NotFound from "./components/NotFound/NotFound";
 import addScript from "./customHooks/addScript";
 
@@ -35,7 +34,6 @@ const App = (): any => {
           render={() => (
             <Fragment>
               <Home />
-              <ArticlesList />
             </Fragment>
           )}
         ></Route>
